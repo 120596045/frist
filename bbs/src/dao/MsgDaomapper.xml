@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.MsgDao">
+    <select id="selAll" resultType="Message" parameterType="String">
+       select * from message where uname=#{uname}
+    </select>
+    <select id="selByMsgId" resultType="Message" parameterType="int"> 
+    select * from message where msgid=#{msgId}
+    </select>
+    <delete id="delById" parameterType="int">
+      delete from message where msgid=#{msgId}
+    </delete>
+    <insert id="addMsg" parameterType="Message">
+    insert into message(uname,title,msgContent,state,sendTo,msgCreateDate)value(#{uname},#{title},#{msgContent},#{state},#{sendTo},#{msgCreateDate})
+    </insert>
+    <update id="upByMsgId" parameterType="int" >
+    update message set state=1 where msgid=#{msgId}
+    </update>
+</mapper>

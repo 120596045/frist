@@ -1,0 +1,30 @@
+mybatis使用
+1、需要导入mybatis的jar包和数据库驱动
+2、配置mybatis。xml文件
+3、建立文件 引入约束<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+4、开始配置数据库连接
+5、通过environments标签的default属性设置要连接数据的id，从而确定使用那个数据库
+6、通过environment设置数据库连接，使用id来区分
+7、可以通过typeAliases标签下的typeAlias标签的type属性获取实体类，alias属性给实体类起别名
+创建一个实体类
+创建一个要实现功能的接口
+配置接口实现功能映射文件 
+建立文件UserDaoMapper.xml 引入约束<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+开始配置数据库sql
+通过mapper的 namespace属性可以设置接口名字可以区分不同的接口显示不同的功能
+查询sql使用mapper标签下的select标签，其id属性为操作sql的id,最好和操作方法相同以便区分，设置list集合的泛型类型，-
+-使用其resultType属性，为实体类的路径，也可以使用mybatis设置的别名
+
+在mybatis中配置映射文件，使用<mappers>标签中的<mapper>下的resource属性设置映射文件的路径。
+实现Dao接口
+1、读取mybatis配置文件，连接数据库  Resources.getResourceAsReader("mybatis.xml")
+2、读取配置存入缓存工厂类中 SqlSessionFactoryBuilder().build(Reader reader);，因需要传入Reader参数，因此
+需要使用Reader reader=Resources.getResourceAsReader("mybatis.xml")；接收数据库读取文件，以便存入。
+3、取出缓存工厂中的读取文件。factory.openSession();
+4、通过读取的文件加载sql取出结果集 。a/接受缓存池中的文件SqlSession sqlsession=factory.openSession();b、读取sql
+返回一个结果集 List<User> list = sqlsession.selectList("Dao.UserDao.selAll");
+关闭 SqlSession读取缓存池存放的空间  sqlSession.close()
+
+Timestamp时间转换工具。java.sql类下的
