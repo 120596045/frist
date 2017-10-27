@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.NewsDao">
+	<select id="getAllNews" resultType="News">
+		select * from news order by #{n_create_date} desc
+	</select>
+	
+	<insert id="saveNews" keyProperty="n_id" parameterType="News">
+		insert into news (n_id,n_title,n_content,u_name,n_create_date) values(#{n_id},#{n_title},#{n_content},#{u_name},#{n_create_date})
+	</insert>
+	
+	<update id="updateNews" parameterType="News">
+		update news set n_title=#{n_title},n_content=#{n_content},u_name=#{u_name},n_create_date=#{n_create_date} where n_id=#{n_id}
+	</update>
+	
+	<delete id="delNews" parameterType="int">
+		delete  from news where n_id=#{n_id}
+	</delete>
+	
+	<select id="getNewsById" resultType="News" parameterType="int">
+		select * from news where n_id=#{n_id}
+	</select>
+	
+	 <select id="getNewsByPage" resultType="News" parameterType="ObjPage">
+		select * from news order by n_id desc limit #{pageIndex},#{pageSize}
+	</select>
+	
+	<select id="getCount" resultType="int">
+		select count(1) from news 
+	</select>
+</mapper>

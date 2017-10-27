@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.GoodsDao">
+     <select id="selAll" resultType="Goods" parameterType="ObjPage">
+     select * from goods order by g_create_date desc limit #{pageIndex},#{pageSize} 
+      <!-- select * from goods -->
+   </select> 
+   
+   <insert id="add" parameterType="Goods">
+     insert into goods(g_name,g_count,g_picture,g_detail,g_sort,g_price,g_create_date,g_species)
+      value (#{g_name},#{g_count},#{g_picture},#{g_detail},#{g_sort},#{g_price},#{g_create_date},#{g_species})
+   </insert> 
+ <!--   <insert id="addClass" parameterType="Goods">
+     insert into goods(g_species,g_sort)value(#{g_species},#{g_sort})
+   </insert> -->
+   
+	<!-- 通过Id查询商品 -->
+	<select id="selectById"  resultType="Goods"  parameterType="int">
+		select * from goods where g_id = #{g_id}
+	</select>
+</mapper>

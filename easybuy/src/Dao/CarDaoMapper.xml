@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="Dao.CarDao">
+	<resultMap type="Car"  id="CarMap">
+		<id property="sc_id"   column="SC_ID"  javaType="java.lang.Integer"/>
+		<result property="u_name"  column="U_NAME"  javaType="java.lang.String"/>
+		<result property="g_name"  column="G_NAME"  javaType="java.lang.String"/>
+		<result property="g_id"  column="G_ID"  javaType="java.lang.Integer"/>
+		<result property="g_picture"  column="G_PICTURE"  javaType="java.lang.String"/>
+		<result property="g_price"  column="G_PRICE"  javaType="java.lang.Double"/>
+		<result property="sum"  column="SUM"  javaType="java.lang.Double"/>
+		<result property="g_num"  column="G_NUM"  javaType="java.lang.Integer"/>
+		<result property="max"  column="MAX"  javaType="java.lang.Integer"/>
+	</resultMap>
+
+	<!-- 插入购物车 -->
+	<insert id="insert"  parameterType="map" useGeneratedKeys="true" keyProperty="sc_id">
+		insert into shopping_car(u_name,g_id,g_name,g_picture,g_price,g_num) values(#{u_name},#{g_id},#{g_name},#{g_picture},#{g_price},#{g_num})
+	</insert>
+
+	<!-- 根据用户名查找购物车 -->
+	<select id="getCarByName" resultMap="CarMap" parameterType="string">
+		select * from shopping_car where u_name = #{u_name}
+	</select>
+	
+	<!-- 根据id删除 -->
+	<delete id="del" parameterType="int">
+		delete from shopping_car where g_id = #{id}
+	</delete>
+	
+	<!-- 根据商品名字删除 -->
+	<delete id="delCarByMap" parameterType="string">
+		delete from shopping_car where g_name = #{g_name}
+		<!-- delete from shopping_car where g_name = #{g_name} and g_num = #{g_num} -->
+	</delete>
+	
+	<!-- 修改商品数量 删除 -->
+	<update id="update" parameterType="map">
+		delete from shopping_car where g_id = #{g_id} and g_num > #{g_num}
+		<!-- update shopping_car set g_num = #{g_num} where sc_id = #{sc_id} -->
+	</update>
+	
+	<!-- 根据商品Id查找 -->
+	<select id="getCarById" resultType="int" parameterType="int">
+		select count(1) from shopping_car where g_id = #{id}
+	</select>
+	
+	<!-- 去重复查询 -->
+	<select id="getCarGroupBy" resultMap="CarMap" parameterType="string">
+		select *,MAX(G_NUM) max from shopping_car where u_name = #{u_name} group by g_id order by sc_id desc
+	</select>
+	
+	<!-- 购物车总计 -->
+	<select id="total" resultType="double" parameterType="string">
+		select sum(g_price) from shopping_car where u_name = #{u_name} 
+	</select>
+	
+</mapper>
+
+

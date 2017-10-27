@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   <properties resource="log4j.properties">
+  </properties>
+  <settings>
+  <setting name="logImpl" value="LOG4J"/>
+  </settings>
+   <typeAliases>
+              <!-- 简化实体类路径起一个简单的访问别名 -->
+     <typeAlias type="entity.User" alias="User" />
+      <typeAlias type="entity.Goods" alias="Goods" />
+      <typeAlias type="entity.ObjPage" alias="ObjPage" />
+      <typeAlias type="entity.News" alias="News"/> 
+      <typeAlias type="entity.Address" alias="Address"/>
+      <typeAlias type="entity.Leave_message" alias="Leave_message"/>
+      <typeAlias type="entity.Car" alias="Car"/>    
+   </typeAliases>
+	<environments default="development">
+		<!-- mysql数据库链接 -->
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/easybuy?useUnicode=true&amp;characterEncoding=UTF-8" />
+				<property name="username" value="root" />
+				<property name="password" value="1234" />
+			</dataSource>
+		</environment>
+             <!-- oracle数据库连接 -->
+		<environment id="development2">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+				<property name="username" value="scott" />
+				<property name="password" value="tiger" />
+			</dataSource>
+		</environment>
+	</environments>
+   <mappers>
+     <mapper resource="Dao/Goods.xml" />
+     <mapper resource="Dao/User.xml" />
+     <mapper resource="Dao/News.xml" />
+     <mapper resource="Dao/Address.xml" />
+     <mapper resource="Dao/Leave_message.xml" />
+     <mapper resource="Dao/CarDaoMapper.xml"/> 
+   </mappers>
+
+</configuration>

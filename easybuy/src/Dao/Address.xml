@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.AddressDao">
+	<!-- 向address表中添加用户注册地址信息  -->
+	<insert id="addAds" keyProperty="a_id" parameterType="Address">
+		insert into address (u_name,a_address)	values(#{u_name},#{a_address})
+	</insert>
+
+</mapper>
