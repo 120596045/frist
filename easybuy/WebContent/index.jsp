@@ -139,7 +139,7 @@
 				<li>
 					<dl>
 						<dt><a href="product-view.jsp"  target="_self"><img src="images/product/5.jpg" /></a></dt>
-						<dd class="title"><a href="product-view.html"  target="_self">法姿韩版显瘦彩边时尚牛仔铅笔裤</a></dd>
+						<dd class="title"><a href="product-view.jsp"  target="_self">法姿韩版显瘦彩边时尚牛仔铅笔裤</a></dd>
 						<dd class="price">￥49.00</dd>
 					</dl>
 				</li>
@@ -160,7 +160,7 @@
 				<li>
 					<dl>
 						<dt><a href="product-view.jsp"  target="_self"><img src="images/product/8.jpg" /></a></dt>
-						<dd class="title"><a href="product-view.html"  target="_self">达派高档拉杆箱20寸 经典款式</a></dd>
+						<dd class="title"><a href="product-view.jsp"  target="_self">达派高档拉杆箱20寸 经典款式</a></dd>
 						<dd class="price">￥198.0</dd>
 					</dl>
 				</li>

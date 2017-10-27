@@ -11,7 +11,7 @@
 <body>
 <div id="header" class="wrap">
 	<div id="logo"><img src="images/logo.gif" /></div>
-	<div class="help"><a href="shopping.html" class="shopping">购物车X件</a><a href="login.html">登录</a><a href="register.html">注册</a><a href="guestbook.html">留言</a><a href="manage/index.html">后台管理</a></div>
+	<div class="help"><a href="shopping.jsp" class="shopping">购物车X件</a><a href="login.jsp">登录</a><a href="register.jsp">注册</a><a href="guestbook.jsp">留言</a><a href="manage/index.jsp">后台管理</a></div>
 	<div class="navbar">
 		<ul class="clearfix">
 			<li class="current"><a href="#">首页</a></li>
@@ -45,7 +45,7 @@
 	</div>
 </div>
 <div id="position" class="wrap">
-	您现在的位置：<a href="index.html">易买网</a> &gt; 阅读新闻
+	您现在的位置：<a href="index.jsp">易买网</a> &gt; 阅读新闻
 </div>
 <div id="main" class="wrap">
 	<div class="lefter">
@@ -53,23 +53,23 @@
 			<h2>商品分类</h2>
 			<dl>
 				<dt>图书音像</dt>
-				<dd><a href="product-list.html">图书</a></dd>
-				<dd><a href="product-list.html">音乐</a></dd>
+				<dd><a href="product-list.jsp">图书</a></dd>
+				<dd><a href="product-list.jsp">音乐</a></dd>
 				<dt>百货</dt>
-				<dd><a href="product-list.html">运动健康</a></dd>
-				<dd><a href="product-list.html">服装</a></dd>
-				<dd><a href="product-list.html">家居</a></dd>
-				<dd><a href="product-list.html">美妆</a></dd>
-				<dd><a href="product-list.html">母婴</a></dd>
-				<dd><a href="product-list.html">食品</a></dd>
-				<dd><a href="product-list.html">手机数码</a></dd>
-				<dd><a href="product-list.html">家具首饰</a></dd>
-				<dd><a href="product-list.html">手表饰品</a></dd>
-				<dd><a href="product-list.html">鞋包</a></dd>
-				<dd><a href="product-list.html">家电</a></dd>
-				<dd><a href="product-list.html">电脑办公</a></dd>
-				<dd><a href="product-list.html">玩具文具</a></dd>
-				<dd><a href="product-list.html">汽车用品</a></dd>
+				<dd><a href="product-list.jsp">运动健康</a></dd>
+				<dd><a href="product-list.jsp">服装</a></dd>
+				<dd><a href="product-list.jsp">家居</a></dd>
+				<dd><a href="product-list.jsp">美妆</a></dd>
+				<dd><a href="product-list.jsp">母婴</a></dd>
+				<dd><a href="product-list.jsp">食品</a></dd>
+				<dd><a href="product-list.jsp">手机数码</a></dd>
+				<dd><a href="product-list.jsp">家具首饰</a></dd>
+				<dd><a href="product-list.jsp">手表饰品</a></dd>
+				<dd><a href="product-list.jsp">鞋包</a></dd>
+				<dd><a href="product-list.jsp">家电</a></dd>
+				<dd><a href="product-list.jsp">电脑办公</a></dd>
+				<dd><a href="product-list.jsp">玩具文具</a></dd>
+				<dd><a href="product-list.jsp">汽车用品</a></dd>
 			</dl>
 		</div>
 	</div>

@@ -45,7 +45,7 @@
 	</div>
 </div>
 <div id="position0" class="wrap">
-	您现在的位置：<a href="index.html">易买网</a> &gt; 结账
+	您现在的位置：<a href="index.jsp">易买网</a> &gt; 结账
 </div>
 <div id="main" class="wrap">
 	<div class="lefter">
@@ -53,23 +53,23 @@
 			<h2>商品分类</h2>
 			<dl>
 				<dt>图书音像</dt>
-				<dd><a href="product-list.html">图书</a></dd>
-				<dd><a href="product-list.html">音乐</a></dd>
+				<dd><a href="product-list.jsp">图书</a></dd>
+				<dd><a href="product-list.jsp">音乐</a></dd>
 				<dt>百货</dt>
-				<dd><a href="product-list.html">运动健康</a></dd>
-				<dd><a href="product-list.html">服装</a></dd>
-				<dd><a href="product-list.html">家居</a></dd>
-				<dd><a href="product-list.html">美妆</a></dd>
-				<dd><a href="product-list.html">母婴</a></dd>
-				<dd><a href="product-list.html">食品</a></dd>
-				<dd><a href="product-list.html">手机数码</a></dd>
-				<dd><a href="product-list.html">家具首饰</a></dd>
-				<dd><a href="product-list.html">手表饰品</a></dd>
-				<dd><a href="product-list.html">鞋包</a></dd>
-				<dd><a href="product-list.html">家电</a></dd>
-				<dd><a href="product-list.html">电脑办公</a></dd>
-				<dd><a href="product-list.html">玩具文具</a></dd>
-				<dd><a href="product-list.html">汽车用品</a></dd>
+				<dd><a href="product-list.jsp">运动健康</a></dd>
+				<dd><a href="product-list.jsp">服装</a></dd>
+				<dd><a href="product-list.jsp">家居</a></dd>
+				<dd><a href="product-list.jsp">美妆</a></dd>
+				<dd><a href="product-list.jsp">母婴</a></dd>
+				<dd><a href="product-list.jsp">食品</a></dd>
+				<dd><a href="product-list.jsp">手机数码</a></dd>
+				<dd><a href="product-list.jsp">家具首饰</a></dd>
+				<dd><a href="product-list.jsp">手表饰品</a></dd>
+				<dd><a href="product-list.jsp">鞋包</a></dd>
+				<dd><a href="product-list.jsp">家电</a></dd>
+				<dd><a href="product-list.jsp">电脑办公</a></dd>
+				<dd><a href="product-list.jsp">玩具文具</a></dd>
+				<dd><a href="product-list.jsp">汽车用品</a></dd>
 			</dl>
 		</div>
 	</div>
@@ -77,7 +77,7 @@
 <div id="news" class="right-main">
 		<h1>&nbsp;</h1>
 		<div class="content">
-            <form action="shopping-result.html" method="post">
+            <form action="shopping-result.jsp" method="post">
                 收货地址:<input name="addr" id="addr" type="button"  value="添加新地址" />
                 <span id="span"></span> <br />
                 <input name="address" type="radio" id="address0" checked="checked" /><span>北京海淀区中关村大厦202</span><br />
